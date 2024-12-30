@@ -15,7 +15,7 @@ vyos_branch = "current"
 release_train = "current"
 
 kernel_version = "6.6.66"
-kernel_flavor = "vyos"
+kernel_flavor = "MCT"
 bootloaders = "syslinux,grub-efi"
 
 squashfs_compression_type = "xz -Xbcj x86 -b 256k -always-use-fragments -no-recovery"

@@ -51,7 +51,7 @@ from datetime import datetime
 EXCEPTION = 0
 now = datetime.now()
 tpm_folder = '/tmp/vyos_tpm_test'
-qemu_name = 'VyOS-QEMU'
+qemu_name = 'MCT-QEMU'
 
 # getch.py
 KEY_F2 = chr(27) + chr(91) + chr(49) + chr(50) + chr(126)
@@ -375,10 +375,10 @@ try:
     #################################################
     # Logging into VyOS system
     #################################################
-    op_mode_prompt = r'vyos@vyos:~\$'
-    cfg_mode_prompt = r'vyos@vyos#'
-    default_user = 'vyos'
-    default_password = 'vyos'
+    op_mode_prompt = r'MCT@MCT:~\$'
+    cfg_mode_prompt = r'MCT@MCT#'
+    default_user = 'MCT'
+    default_password = 'MCT'
 
     if args.sbtest:
         log.info('Disable UEFI Secure Boot for initial installation')
@@ -402,9 +402,9 @@ try:
     c.expect('\nWhat would you like to name this image?.*')
     c.sendline('')
     c.expect(f'\nPlease enter a password for the "{default_user}" user.*')
-    c.sendline('vyos')
+    c.sendline('MCT')
     c.expect(f'\nPlease confirm password for the "{default_user}" user.*')
-    c.sendline('vyos')
+    c.sendline('MCT')
     c.expect('\nWhat console should be used by default?.*')
     c.sendline('S')
 

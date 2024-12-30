@@ -617,9 +617,9 @@ DOCUMENTATION_URL="{build_config['documentation_url']}"
                 --distribution {{debian_distribution}} \
                 --firmware-binary false \
                 --firmware-chroot false \
-                --iso-application "VyOS" \
+                --iso-application "MCT" \
                 --iso-publisher "{{build_by}}" \
-                --iso-volume "VyOS" \
+                --iso-volume "MCT" \
                 --linux-flavours {{kernel_flavor}} \
                 --linux-packages linux-image-{{kernel_version}} \
                 --mirror-binary {{debian_mirror}} \
